@@ -8,7 +8,6 @@ import java.util.stream.Collectors;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
-import javax.persistence.NoResultException;
 
 import com.ciandt.pauloneto.dto.UsuarioDTO;
 
@@ -45,12 +44,8 @@ public class UsuarioService {
     }
 
     public void edit(UsuarioDTO usuarioDTO, String login)throws HttpException{
-        UsuarioDTO byLogin = getByLogin(login);
-        if(byLogin == null)
-            throw new HttpException("Usuário não encontrado");
-        
-        indexOf = this.usuarios.indexOf(byLogin);
-        this.usuarios.add(indexOf,usuarioDTO);
+        remove(login);
+        this.usuarios.add(usuarioDTO);
     }
 
     public void remove(String login)throws HttpException{
