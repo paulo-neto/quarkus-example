@@ -1,4 +1,4 @@
-package com.ciandt.pauloneto.resteasyjackson;
+package com.ciandt.pauloneto.controller;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
