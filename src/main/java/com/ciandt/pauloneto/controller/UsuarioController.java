@@ -22,7 +22,7 @@ import java.util.List;
 @Path("/usuario")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-@Tag(name = "usuario", description = "Serviçoes relacionados ao CRUD de Usuario")
+@Tag(name = "usuario", description = "Serviços relacionados ao CRUD de Usuario")
 public class UsuarioController {
 
     @Inject
@@ -95,7 +95,7 @@ public class UsuarioController {
 
     @DELETE
     @Path("/{login}")
-    @Operation(operationId = "editaUmUsuario")
+    @Operation(operationId = "removeUmUsuario")
     @APIResponse(
         responseCode = "200",
         description = "Remove um usuário",
